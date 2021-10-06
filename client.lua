@@ -104,6 +104,7 @@ AddEventHandler('av_moc:exit', function()
 	Citizen.Wait(500)
 	DoScreenFadeIn(1500)
 	inside = false
+	Despawn()
 end)
 
 function Despawn()
