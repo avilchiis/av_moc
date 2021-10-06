@@ -106,6 +106,21 @@ AddEventHandler('av_moc:exit', function()
 	inside = false
 end)
 
+function Despawn()
+	SetEntityAsNoLongerNeeded(zona1)
+	SetEntityAsNoLongerNeeded(zona2)
+	SetEntityAsNoLongerNeeded(zona3)
+	SetEntityAsNoLongerNeeded(puerta)
+	DeleteObject(zona1)
+	DeleteObject(zona2)
+	DeleteObject(zona3)
+	DeleteObject(puerta)
+	zona1 = nil
+	zona2 = nil
+	zona3 = nil
+	puerta = nil
+end
+
 -- This is an old method where objects spawns under ped position but the exterior lights are a problem
 -- I couldn't find a way to spawn the black shell gr_grdlc_int_01_shell
 --[[
